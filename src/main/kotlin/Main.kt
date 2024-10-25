@@ -1,3 +1,3 @@
 fun main() {
-    println(AOK.mergeLanguage("dbshddms anjek? 찐dlek"))
+    println(KoreanPack.numberToKorean(351235789))
 }
