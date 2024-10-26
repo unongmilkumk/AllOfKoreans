@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 public class KoreanPack {
     public static ArrayList<String> koreans = new ArrayList<>(Arrays.asList("ㅂ", "ㅈ", "ㄷ", "ㄱ", "ㅅ", "ㅛ", "ㅕ", "ㅑ", "ㅐ", "ㅔ", "ㅁ", "ㄴ", "ㅇ", "ㄹ", "ㅎ", "ㅗ", "ㅓ", "ㅏ",
@@ -43,7 +42,7 @@ public class KoreanPack {
         int a = 0;
         while (a <= nt.length() - 1) {
             int now = Integer.parseInt(String.valueOf(nt.toCharArray()[nt.length() - 1 - a]));
-            if (inte.get(inte.size() - 1).equals("")) {
+            if (inte.get(inte.size() - 1).isEmpty()) {
                 inte.set(inte.size() - 1, String.valueOf(now));
             } else if (Integer.parseInt(inte.get(inte.size() - 1)) >= 1000) {
                 inte.add("");
@@ -111,7 +110,7 @@ public class KoreanPack {
         for (String s : Numm) {
             if (!kor.contains(s)) continue;
             String string = kor.split(s)[0];
-            if (s.equals("만") && string.equals("")) {
+            if (s.equals("만") && string.isEmpty()) {
                 ints.add(1);
                 kor = kor.split("만")[1];
                 continue;
@@ -139,7 +138,7 @@ public class KoreanPack {
         for (char c : korean.toCharArray()) {
             switch (c) {
                 case '천' -> {
-                    if (cc.equals("")) {
+                    if (cc.isEmpty()) {
                         integers.add(1);
                     } else {
                         integers.add(SNum.indexOf(cc) + 1);
@@ -148,7 +147,7 @@ public class KoreanPack {
                 }
                 case '백' -> {
                     if (!korean.contains("천")) integers.add(0);
-                    if (cc.equals("")) {
+                    if (cc.isEmpty()) {
                         integers.add(1);
                     } else {
                         integers.add(SNum.indexOf(cc) + 1);
@@ -160,16 +159,14 @@ public class KoreanPack {
                         if (!korean.contains("천")) integers.add(0);
                         integers.add(0);
                     }
-                    if (cc.equals("")) {
+                    if (cc.isEmpty()) {
                         integers.add(1);
                     } else {
                         integers.add(SNum.indexOf(cc) + 1);
                     }
                     cc = "";
                 }
-                default -> {
-                    cc += c;
-                }
+                default -> cc += c;
             }
         }
         integers.add(SNum.indexOf(cc) + 1);
