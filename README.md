@@ -1,15 +1,19 @@
-# KoreanPack
+# Proj. AOK
+### All Of Koreans
 
-`KoreanPack` is a Java utility class designed to assist with various Korean language processing tasks. It includes methods for converting Korean numbers to text, translating between Korean and English characters, splitting and merging Hangul characters, and other language manipulations.
+Korean pack for JVM Users
 
-## Features
+## How to Import?
+there is no way to import with gradle / maven, so just install to import.
+
+## What can I do?
 
 - **Number Conversion**: Convert Arabic numerals to Korean words and vice versa.
 - **Character Mapping**: Map between Korean and English keyboard characters.
 - **Hangul Decomposition and Composition**: Split Korean Hangul characters into initial, medial, and final sounds (자음/모음/종성) and recombine them.
 - **Bidirectional Language Conversion**: Convert between Korean and English characters in a string, merging characters appropriately for Korean.
 
-## Usage
+## How to code?
 
 ### Number Conversion
 
