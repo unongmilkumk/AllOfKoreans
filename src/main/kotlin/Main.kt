@@ -1,3 +1,3 @@
 fun main() {
-    println(KoreanPack.numberToKorean(351235789))
+    println(KoreanPack.mergeLanguage("안녕dkssud"))
 }

@@ -69,8 +69,8 @@
   Detects both Korean and English characters within a string, converting each accordingly and recombining.  
   Example:
   ```java
-  String mergedText = KoreanPack.mergeLanguage("안녕dkssud");
-  // Output: "안녕하세요"
+  String mergedText = KoreanPack.mergeLanguage("안녕 dkssud");
+  // Output: "dkssud 안녕"
   ```
 
 ### Utilities
